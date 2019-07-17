@@ -8,11 +8,7 @@ class App < Sinatra::Base
   post '/reverse' do
     original_string = params["string"]
     @reversed_string = original_string.reverse
-  end 
     
-    erb :reversed
-  end
-
     erb :reversed
   end
 
