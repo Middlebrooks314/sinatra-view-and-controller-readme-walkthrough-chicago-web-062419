@@ -8,8 +8,12 @@
 
   <body>
     <h1>The Ultimate Reversed String!</h1>
-
-    <!--   Use ERB tags to bring in an instance variable containing the reversed string -->
+    
+    post '/reverse' do
+      original_string = params["string"]
+      @reversed_string = original_string.reverse
+    erb :reversed
+  end
 
   </body>
 </html>
